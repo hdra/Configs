@@ -1,8 +1,6 @@
 #!/bin/bash
 
-shopt -s dotglob extglob globstar nullglob
-
-#git submodule update --init
+shopt -s dotglob extglob nullglob
 
 if [[ $0 == /* ]]; then
     location=${0%/*}
@@ -11,22 +9,16 @@ else
     location=${location%/*}
 fi
 
-excludes='+(README.md|readme.md|install.sh|.git|.git/*|*/.git|.gitignore|.gitmodules)'
+excludes='+(readme.md|install.sh|.git|.git/*|*/.git|.gitignore|.gitmodules)'
 
-echo "Linking.."
-
-for file in "$location"/**/*; do
+for file in $location/* 
+do
     bare="${file#$location/}"
 
-    case "$bare" in
-        $excludes) continue ;;
+    case "$bare" in $excludes) 
+        continue ;;
     esac
 
-    if [[ -d "$file" ]]; then
-        mkdir -p ~/"$bare"
-    elif [[ -f "$file" ]]; then
-        ln -sfn "$file" ~/"$bare"
-    fi
+    echo "Linking "$bare
+    ln -s "$file" "$HOME/${file##*/}"
 done
-
-echo "Done!"
