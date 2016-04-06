@@ -11,11 +11,11 @@ fi
 
 excludes='+(readme.md|install.sh|.git|.git/*|*/.git|.gitignore|.gitmodules)'
 
-for file in $location/* 
+for file in $location/*
 do
     bare="${file#$location/}"
 
-    case "$bare" in $excludes) 
+    case "$bare" in $excludes)
         continue ;;
     esac
 
