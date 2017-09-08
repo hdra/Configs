@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 import os
 
 excludes = ['readme.md', 'install.py', '.git', '.gitignore', '.gitmodules']
