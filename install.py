@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 import os
+import shutil
 
-excludes = ['readme.md', 'install.py', '.git', '.gitignore', '.gitmodules']
+excludes = ['readme.md', 'install.py', '.git', '.gitignore', '.gitmodules', 'sublime']
 # container directory. don't symlink directly, symlinks the contents instead
 containers = ['.config']
 
@@ -20,6 +21,15 @@ def iterate_and_install(directory, target_dir):
                 os.symlink(source, destination)
 
 
+def install_sublime(source, target):
+    if os.path.isdir(target):
+        shutil.rmtree(target)
+    os.symlink(source, target)
+
 home = os.path.expanduser('~')
 pwd = os.path.dirname(os.path.realpath(__file__))
 iterate_and_install(pwd, home)
+
+sublime_source = os.path.join(pwd, 'sublime/User')
+sublime_target = os.path.join(home, 'Library/Application Support/Sublime Text 3/Packages/User')
+install_sublime(sublime_source, sublime_target)
