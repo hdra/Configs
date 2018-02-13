@@ -32,6 +32,7 @@ daynote(){
 alias gaa="git add -A"
 alias gst="git status"
 alias gl="git pull"
+alias gp="git push"
 alias gcm="git commit -m"
 alias gam="git commit -am"
 alias gd="git diff"

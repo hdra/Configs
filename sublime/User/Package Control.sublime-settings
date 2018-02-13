@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"GraphQL",
 		"Package Control",
 		"Pretty JSON"
 	]
