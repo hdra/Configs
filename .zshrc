@@ -55,22 +55,12 @@ alias tmx="tmux"
 alias runs="reattach-to-user-namespace"
 
 # Works shortcuts
-alias ac-status="ssh ac-prod-1 'sudo supervisorctl status'"
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
-
-alias deploy_fallout="ssh Fallout-prod 'cd opskii && git pull && make compile'"
-alias restart_fallout="ssh Fallout-prod 'sudo service opskii restart'"
 
 # Git ignore generator
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 bindkey -e
-
-# Automatically activate venv a `venv` directory is present on the current dir.
-# Mostly used for tmux windows
-if [ -d "venv" ] ; then
-    source venv/bin/activate
-fi
 
 #FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
