@@ -22,9 +22,11 @@ def iterate_and_install(directory, target_dir):
 
 
 def install_sublime(source, target):
-    if os.path.isdir(target):
+    is_symlink = os.path.islink(target)
+    if os.path.isdir(target) and not is_symlink:
         shutil.rmtree(target)
-    os.symlink(source, target)
+    if not is_symlink:
+        os.symlink(source, target)
 
 home = os.path.expanduser('~')
 pwd = os.path.dirname(os.path.realpath(__file__))
