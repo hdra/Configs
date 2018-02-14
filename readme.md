@@ -2,8 +2,7 @@ Collection of config files, with many ZSH functions taken from [prezto](https://
 
 ## Install
 
-    git clone git@github.com:hdra/Configs.git ~/.dotfiles
+    git clone --recurse-submodules git@github.com:hdra/Configs.git ~/.dotfiles
     cd ~/.dotfiles
-    git submodule init
     ./install.py
 
