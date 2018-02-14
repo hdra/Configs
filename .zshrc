@@ -29,6 +29,7 @@ daynote(){
  vim $(date +%Y-%m-%d).md
 }
 
+alias g="git"
 alias gaa="git add -A"
 alias gst="git status"
 alias gl="git pull"
