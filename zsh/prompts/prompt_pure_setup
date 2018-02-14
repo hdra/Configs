@@ -214,8 +214,8 @@ prompt_pure_async_vcs_info() {
 	# only export two msg variables from vcs_info
 	zstyle ':vcs_info:*' max-exports 2
 	# export branch (%b) and git toplevel (%R)
-	zstyle ':vcs_info:git*' formats '%b' '%R'
-	zstyle ':vcs_info:git*' actionformats '%b|%a' '%R'
+	zstyle ':vcs_info:git*' formats '%F{green}%b%f' '%R'
+	zstyle ':vcs_info:git*' actionformats '%b|%F{yellow}%a%f' '%R'
 
 	vcs_info
 
@@ -465,10 +465,10 @@ prompt_pure_setup() {
 	PROMPT='%(12V.%F{242}%12v%f .)'
 
 	# prompt turns red if the previous command didn't exit with 0
-	PROMPT+='%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+	PROMPT+='%(?.%F{166}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
 
   # show timestamp on right prompt
-  RPROMPT='%F{yellow}% %*%f'
+  RPROMPT='%F{101}%*%f'
 }
 
 prompt_pure_setup "$@"

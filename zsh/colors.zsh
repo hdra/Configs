@@ -78,8 +78,26 @@ else
 
   alias ls="${aliases[ls]:-ls} -G"
 fi
+
+# Grep
 export GREP_COLOR='37;45'           # BSD.
 export GREP_COLORS="mt=$GREP_COLOR" # GNU.
 alias grep="${aliases[grep]:-grep} --color=auto"
 
+# From https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/spectrum.zsh#L22
+# Show all 256 colors with color number
+ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Arma virumque cano Troiae qui primus ab oris}
+
+function spectrum_ls() {
+  for code in {0..255}; do
+    print -P -- "$code: %{$FG[$code]%}$ZSH_SPECTRUM_TEXT%f"
+  done
+}
+
+# Show all 256 colors where the background is set to specific color
+function spectrum_bls() {
+  for code in {0..255}; do
+    print -P -- "$code: %{$BG[$code]%}$ZSH_SPECTRUM_TEXT%b"
+  done
+}
 
