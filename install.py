@@ -2,7 +2,7 @@
 import os
 import shutil
 
-excludes = ['readme.md', 'install.py', '.git', '.gitignore', '.gitmodules', 'sublime']
+excludes = ['readme.md', 'install.py', '.git', '.gitignore', '.gitmodules', 'sublime', 'zsh']
 # container directory. don't symlink directly, symlinks the contents instead
 containers = ['.config']
 

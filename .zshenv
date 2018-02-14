@@ -20,6 +20,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 # First place too look for path
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/.bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
