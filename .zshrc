@@ -51,7 +51,7 @@ alias epoch="date +%s"
 alias httpHere="python -m SimpleHTTPServer"
 
 alias vi="vim"
-#alias vim="nvim"
+alias vim="nvim"
 alias tmx="tmux"
 alias runs="reattach-to-user-namespace"
 
