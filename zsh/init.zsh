@@ -1,3 +1,10 @@
+#
+# Defines helper functions.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
 # Checks if a file can be autoloaded by trying to load it in a subshell.
 function is-autoloadable {
   ( unfunction $1 ; autoload -U +X $1 ) &> /dev/null
@@ -26,6 +33,7 @@ source "${HOME}/.dotfiles/zsh/completions.zsh"
 source "${HOME}/.dotfiles/zsh/history.zsh"
 source "${HOME}/.dotfiles/zsh/colors.zsh"
 source "${HOME}/.dotfiles/zsh/prompts.zsh"
+source "${HOME}/.dotfiles/zsh/fasd.zsh"
 
 #ZSH Directory flags
 setopt AUTO_CD              # Auto changes to a directory without typing cd.
