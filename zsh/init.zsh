@@ -29,6 +29,7 @@ function coalesce {
   return 1
 }
 
+source "${HOME}/.dotfiles/zsh/vim.zsh"
 source "${HOME}/.dotfiles/zsh/completions.zsh"
 source "${HOME}/.dotfiles/zsh/history.zsh"
 source "${HOME}/.dotfiles/zsh/colors.zsh"

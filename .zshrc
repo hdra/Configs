@@ -61,8 +61,6 @@ alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | 
 # Git ignore generator
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-bindkey -e
-
 #FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
