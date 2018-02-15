@@ -45,6 +45,8 @@ alias lk='ll -Sr'        # Lists sorted by size, largest last.
 alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias sl='ls'            # I often screw this up.
 
+alias less="less -R"  #color
+
 alias ydl="noglob youtube-dl"
 alias resetdns="dscacheutil -flushcache"
 alias epoch="date +%s"
