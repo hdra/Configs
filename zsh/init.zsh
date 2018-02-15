@@ -29,13 +29,6 @@ function coalesce {
   return 1
 }
 
-source "${HOME}/.dotfiles/zsh/vim.zsh"
-source "${HOME}/.dotfiles/zsh/completions.zsh"
-source "${HOME}/.dotfiles/zsh/history.zsh"
-source "${HOME}/.dotfiles/zsh/colors.zsh"
-source "${HOME}/.dotfiles/zsh/prompts.zsh"
-source "${HOME}/.dotfiles/zsh/fasd.zsh"
-
 #ZSH Directory flags
 setopt AUTO_CD              # Auto changes to a directory without typing cd.
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
@@ -47,3 +40,11 @@ setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
                             # Use >! and >>! to bypass.
+
+source "${HOME}/.dotfiles/zsh/vim.zsh"
+source "${HOME}/.dotfiles/zsh/completions.zsh"
+source "${HOME}/.dotfiles/zsh/history.zsh"
+source "${HOME}/.dotfiles/zsh/colors.zsh"
+source "${HOME}/.dotfiles/zsh/prompts.zsh"
+source "${HOME}/.dotfiles/zsh/fasd.zsh"
+
