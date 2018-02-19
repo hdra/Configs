@@ -40,7 +40,7 @@ alias gd="git diff"
 alias gs="git status"
 
 alias ll="ls -lh"
-alias la="ls -lA"
+alias la="ll -A"
 alias lk='ll -Sr'        # Lists sorted by size, largest last.
 alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias sl='ls'            # I often screw this up.
