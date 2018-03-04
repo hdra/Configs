@@ -27,6 +27,7 @@ export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+export PATH=$PATH:/usr/local/opt/python@2/libexec/bin # homebrew's python@2 formula
 
 # Git
 export GIT_AUTHOR=Hendra
