@@ -1,8 +1,10 @@
 {
+	"color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
 	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"preview_on_click": false
+	"preview_on_click": false,
+	"theme": "ayu-mirage.sublime-theme"
 }

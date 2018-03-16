@@ -5,7 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
+		"ayu",
 		"GraphQL",
+		"One Dark Color Scheme",
 		"Package Control",
 		"Pretty JSON"
 	]
