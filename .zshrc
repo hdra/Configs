@@ -63,6 +63,10 @@ alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | 
 # Git ignore generator
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+function with_env() {
+  eval $(egrep -v '^#' $1 | xargs) ${@:2}
+}
+
 #FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
