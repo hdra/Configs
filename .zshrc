@@ -25,9 +25,6 @@ export TAG=`date +DEPLOYED-%F/%H%M`
 alias arts="php artisan"
 alias cda="composer dumpautoload"
 alias pymanage="python manage.py"
-daynote(){
- vim $(date +%Y-%m-%d).md
-}
 
 alias g="git"
 alias gaa="git add -A"
@@ -60,12 +57,30 @@ alias runs="reattach-to-user-namespace"
 # Works shortcuts
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
+function daynote(){
+ vim $(date +%Y-%m-%d).md
+}
+
 # Git ignore generator
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+function gi() {
+  curl -L -s https://www.gitignore.io/api/$@
+}
 
 function with_env() {
   eval $(egrep -v '^#' $1 | xargs) ${@:2}
 }
+
+function install_subl() {
+  ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $HOME/.local/bin/subl
+}
+
+# Run docker volume create pgdata previously
+alias dockerrun_pg="docker run -d \
+  --name pgdb \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_USER=postgres \
+  -v pgdata:/var/lib/postgresql/data \
+  postgres:10"
 
 #FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
