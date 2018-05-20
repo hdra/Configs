@@ -8,6 +8,6 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [core]
-	excludesfile = /Users/hendra/.gitignore_global
+	excludesfile = /Users/hndr/.gitignore_global
 [commit]
 	template = /Users/hendra/.stCommitMsg

@@ -82,6 +82,14 @@ alias dockerrun_pg="docker run -d \
   -v pgdata:/var/lib/postgresql/data \
   postgres:10"
 
+
+alias dockerrun_mysql="docker run -d \
+  --name mysqldb \
+  -v /Users/hndr/Data/mysql:/var/lib/mysql \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  -p 3306:3306 \
+  mysql:5 --sql-mode='NO_ENGINE_SUBSTITUTION'"
+
 #FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
