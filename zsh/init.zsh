@@ -40,6 +40,7 @@ setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
                             # Use >! and >>! to bypass.
+unsetopt NOMATCH            # Glob expansion
 
 source "${HOME}/.dotfiles/zsh/vim.zsh"
 source "${HOME}/.dotfiles/zsh/completions.zsh"

@@ -20,6 +20,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 # First place too look for path
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/.bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
@@ -45,7 +46,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 
-export DOCKER_HOST=tcp://192.168.99.100:2376
-export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/dinghy
-export DOCKER_TLS_VERIFY=1
-export DOCKER_MACHINE_NAME=dinghy
+# export DOCKER_HOST=tcp://192.168.99.100:2376
+# export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/dinghy
+# export DOCKER_TLS_VERIFY=1
+# export DOCKER_MACHINE_NAME=dinghy

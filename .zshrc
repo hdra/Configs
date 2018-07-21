@@ -34,7 +34,9 @@ alias gp="git push"
 alias gcm="git commit -m"
 alias gam="git commit -am"
 alias gd="git diff"
-alias gs="git status"
+alias gnuke="git reset --hard && git clean -df"
+# Works shortcuts
+alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
 alias ll="ls -lh"
 alias la="ll -A"
@@ -53,9 +55,6 @@ alias vi="vim"
 alias vim="nvim"
 alias tmx="tmux"
 alias runs="reattach-to-user-namespace"
-
-# Works shortcuts
-alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
 function daynote(){
  vim $(date +%Y-%m-%d).md
@@ -77,9 +76,10 @@ function install_subl() {
 # Run docker volume create pgdata previously
 alias dockerrun_pg="docker run -d \
   --name pgdb \
+  -p 5432:5432 \
   -e POSTGRES_PASSWORD=postgres \
   -e POSTGRES_USER=postgres \
-  -v pgdata:/var/lib/postgresql/data \
+  -v /Users/hndr/Data/postgres:/var/lib/postgresql/data \
   postgres:10"
 
 
