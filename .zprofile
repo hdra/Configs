@@ -32,3 +32,5 @@ path=(
 #
 
 TMPPREFIX="$(mktemp -d)/zsh"
+
+export PATH="$HOME/.cargo/bin:$PATH"
