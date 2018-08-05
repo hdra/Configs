@@ -2,7 +2,17 @@
 import os
 import shutil
 
-excludes = ['readme.md', 'install.py', '.git', '.gitignore', '.gitmodules', 'sublime', 'zsh']
+excludes = [
+  'readme.md',
+  'install.py',
+  '.git',
+  '.gitignore',
+  '.gitmodules',
+  'sublime',
+  'zsh',
+  'vscode',
+  'Brewfile',
+]
 # container directory. don't symlink directly, symlinks the contents instead
 containers = ['.config']
 
@@ -28,6 +38,18 @@ def install_sublime(source, target):
     if not is_symlink:
         os.symlink(source, target)
 
+
+def install_vscode(source, target):
+    if not os.path.exists(target):
+        os.makedirs(target, exist_ok=True)
+    for f in os.listdir(source):
+        source_file = os.path.join(source, f)
+        destination_file = os.path.join(target, f)
+        if os.path.exists(destination_file) and not os.path.islink(destination_file):
+            os.remove(destination_file)
+        os.symlink(source_file, destination_file)
+
+
 home = os.path.expanduser('~')
 pwd = os.path.dirname(os.path.realpath(__file__))
 iterate_and_install(pwd, home)
@@ -35,3 +57,7 @@ iterate_and_install(pwd, home)
 sublime_source = os.path.join(pwd, 'sublime/User')
 sublime_target = os.path.join(home, 'Library/Application Support/Sublime Text 3/Packages/User')
 install_sublime(sublime_source, sublime_target)
+
+vscode_source = os.path.join(pwd, 'vscode')
+vscode_target = os.path.join(home, 'Library/Application Support/Code/User')
+install_vscode(vscode_source, vscode_target)

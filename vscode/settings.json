@@ -1,0 +1,34 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 24,
+    "editor.lineNumbers": "relative",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, monospace",
+    "editor.renderWhitespace": "all",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "s"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": ["workbench.action.previousEditor"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.surround": true,
+    "vim.incsearch": true,
+    "workbench.colorTheme": "One Dark Pro",
+}
