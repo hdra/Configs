@@ -1,9 +1,11 @@
 {
     "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.minimap.enabled": false,
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "editor.lineHeight": 24,
+    "editor.lineHeight": 0,
     "editor.lineNumbers": "relative",
     "editor.fontFamily": "'Fira Code', Menlo, Monaco, monospace",
     "editor.renderWhitespace": "all",
@@ -19,6 +21,14 @@
             "commands": [":w"]
         },
         {
+            "before": ["<leader>", "c"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<leader>", "C"],
+            "commands": ["workbench.action.closeOtherEditors"]
+        },
+        {
             "before": ["<leader>", "l"],
             "commands": ["workbench.action.nextEditor"]
         },
@@ -30,5 +40,6 @@
     "vim.leader": "<space>",
     "vim.surround": true,
     "vim.incsearch": true,
+    "vim.foldfix": true,
     "workbench.colorTheme": "One Dark Pro",
 }

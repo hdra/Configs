@@ -35,6 +35,7 @@ alias gcm="git commit -m"
 alias gam="git commit -am"
 alias gd="git diff"
 alias gnuke="git reset --hard && git clean -df"
+
 # Works shortcuts
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
@@ -75,7 +76,6 @@ function install_subl() {
 
 # Run docker volume create pgdata previously
 alias dockerrun_pg="docker run -d \
-  --name pgdb \
   -p 5432:5432 \
   -e POSTGRES_PASSWORD=postgres \
   -e POSTGRES_USER=postgres \
@@ -84,11 +84,11 @@ alias dockerrun_pg="docker run -d \
 
 
 alias dockerrun_mysql="docker run -d \
-  --name mysqldb \
   -v /Users/hndr/Data/mysql:/var/lib/mysql \
   -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
   -p 3306:3306 \
   mysql:5 --sql-mode='NO_ENGINE_SUBSTITUTION'"
+
 
 #FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
