@@ -2,23 +2,26 @@
 [
     {
         "key": "ctrl+p",
-        "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "cmd+p",
-        "command": "-workbench.action.quickOpen"
-    },
-    {
-        "key": "ctrl+p",
         "command": "-cursorUp",
         "when": "textInputFocus"
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.quickOpenNavigateNext"
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
     },
     {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenNavigatePrevious"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
     }
 ]

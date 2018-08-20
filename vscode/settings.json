@@ -2,12 +2,14 @@
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.list.openMode": "doubleClick",
     "editor.minimap.enabled": false,
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.lineHeight": 0,
+    "editor.tabSize": 2,
     "editor.lineNumbers": "relative",
-    "editor.fontFamily": "'Fira Code', Menlo, Monaco, monospace",
+    "editor.fontFamily": "'Fira Code', Menlo, monospace",
     "editor.renderWhitespace": "all",
     "vim.insertModeKeyBindings": [
         {
@@ -35,11 +37,38 @@
         {
             "before": ["<leader>", "h"],
             "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<leader>", "r"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
         }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
     ],
     "vim.leader": "<space>",
     "vim.surround": true,
     "vim.incsearch": true,
     "vim.foldfix": true,
+    "vim.useSystemClipboard": true,
     "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.fontSize": 14,
+    "[typescript]": {
+        "editor.tabSize": 2
+    }
 }
