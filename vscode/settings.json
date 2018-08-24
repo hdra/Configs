@@ -8,9 +8,10 @@
     "editor.fontSize": 14,
     "editor.lineHeight": 0,
     "editor.tabSize": 2,
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     "editor.fontFamily": "'Fira Code', Menlo, monospace",
     "editor.renderWhitespace": "all",
+    "vim.easymotion": true,
     "vim.insertModeKeyBindings": [
         {
             "before": ["j","j"],
@@ -70,5 +71,6 @@
     "terminal.integrated.fontSize": 14,
     "[typescript]": {
         "editor.tabSize": 2
-    }
+    },
+    "breadcrumbs.enabled": true
 }
