@@ -1,10 +1,12 @@
 {
 	"color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
+	"draw_white_space": "all",
 	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"preview_on_click": false,
-	"theme": "ayu-mirage.sublime-theme"
+	"theme": "ayu-mirage.sublime-theme",
+	"translate_tabs_to_spaces": true
 }

@@ -47,6 +47,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 
+
 # export DOCKER_HOST=tcp://192.168.99.100:2376
 # export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/dinghy
 # export DOCKER_TLS_VERIFY=1

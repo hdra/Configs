@@ -9,5 +9,6 @@
 	trustExitCode = true
 [core]
 	excludesfile = /Users/hndr/.gitignore_global
+	editor = nvim
 [commit]
 	template = /Users/hendra/.stCommitMsg
