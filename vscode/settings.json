@@ -8,7 +8,6 @@
     "editor.fontSize": 14,
     "editor.lineHeight": 0,
     "editor.tabSize": 2,
-    "editor.lineNumbers": "relative",
     "editor.fontFamily": "'Fira Code', Menlo, monospace",
     "editor.renderWhitespace": "all",
     "vim.easymotion": true,
