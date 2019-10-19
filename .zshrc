@@ -87,7 +87,7 @@ alias dockerrun_mysql="docker run -d \
   -v /Users/hndr/Data/mysql:/var/lib/mysql \
   -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
   -p 3306:3306 \
-  mysql:5 --sql-mode='NO_ENGINE_SUBSTITUTION'"
+  mysql:5.7 --sql-mode='NO_ENGINE_SUBSTITUTION'"
 
 
 #FZF
