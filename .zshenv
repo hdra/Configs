@@ -30,6 +30,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/loca
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 export PATH=$PATH:/usr/local/opt/python@2/bin # homebrew's python@2 formula
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$HOME/Tools/flutter/bin:$PATH
 
 # Git
 export GIT_AUTHOR=Hendra
