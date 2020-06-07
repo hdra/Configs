@@ -95,3 +95,10 @@ alias dockerrun_mysql="docker run -d \
 
 #Kiex
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+
+function compile_and_run() {
+  fullname=$1
+  filename="${fullname%.*}"
+  gcc $fullname -o $filename && ./$filename
+}
