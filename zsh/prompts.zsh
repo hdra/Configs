@@ -7,3 +7,6 @@ PURE_PROMPT_SYMBOL="❯❯"
 PURE_GIT_UP_ARROW="▲"
 PURE_GIT_DOWN_ARROW="▼"
 prompt pure
+
+zstyle ':prompt:pure:git:branch' color green
+zstyle ':prompt:pure:prompt:success' color yellow
