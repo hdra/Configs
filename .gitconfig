@@ -10,3 +10,5 @@
 [core]
 	excludesfile = /Users/hndr/.gitignore_global
 	editor = nvim
+[pull]
+	ff = only
