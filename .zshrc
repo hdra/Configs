@@ -102,3 +102,4 @@ function compile_and_run() {
   filename="${fullname%.*}"
   gcc $fullname -o $filename && ./$filename
 }
+eval "$(pyenv init -)"
