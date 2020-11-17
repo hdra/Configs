@@ -192,41 +192,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Use mouse side button to move desktop",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "pointing_button": "button4"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "b",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "pointing_button": "button7"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "n",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -392,7 +357,7 @@
                                 "key_code": "right_command"
                             },
                             "to": {
-                                "pointing_button": "button7"
+                                "key_code": "vk_mission_control"
                             }
                         },
                         {
