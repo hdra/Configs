@@ -4,8 +4,8 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.list.openMode": "doubleClick",
     "editor.minimap.enabled": false,
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
+    "editor.fontLigatures": false,
+    "editor.fontSize": 24,
     "editor.lineHeight": 0,
     "editor.tabSize": 2,
     "editor.fontFamily": "'Fira Code', Menlo, monospace",
@@ -83,5 +83,6 @@
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
-    }
+    },
+    "window.zoomLevel": -1
 }

@@ -94,7 +94,7 @@ alias dockerrun_mysql="docker run -d \
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #Kiex
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+# test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 
 function compile_and_run() {

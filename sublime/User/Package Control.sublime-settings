@@ -15,9 +15,8 @@
 		"Indent XML",
 		"One Dark Color Scheme",
 		"Package Control",
-		"Pretty JSON",
 		"Python Pretty Print",
 		"SqlBeautifier",
-		"Vue Syntax Highlight"
-	]
+		"Vue Syntax Highlight",
+	],
 }
