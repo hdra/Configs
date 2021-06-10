@@ -94,7 +94,11 @@ alias dockerrun_mysql="docker run -d \
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #Kiex
-# test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+#Had to be set twice because on osx, /etc/zprofile will get sourced after zshenv
+#which would change the $PATH ordering.
+#had to also set it on zshenv coz some non-interactive terminal e.g. test runner
+#doesn't source zshrc / zprofile
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 
 function compile_and_run() {
