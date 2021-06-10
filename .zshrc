@@ -95,7 +95,7 @@ alias dockerrun_mysql="docker run -d \
 
 #Kiex
 #Had to be set twice because on osx, /etc/zprofile will get sourced after zshenv
-#which would change the $PATH ordering.
+#which would change the $PATH ordering. https://stackoverflow.com/questions/26433856/why-would-path-be-getting-overwritten-after-shell-login#comment69745215_26434096
 #had to also set it on zshenv coz some non-interactive terminal e.g. test runner
 #doesn't source zshrc / zprofile
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
