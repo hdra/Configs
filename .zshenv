@@ -24,6 +24,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/.bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.mix/escripts:$PATH
 export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin

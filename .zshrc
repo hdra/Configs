@@ -35,6 +35,7 @@ alias gcm="git commit -m"
 alias gam="git commit -am"
 alias gd="git diff"
 alias gnuke="git reset --hard && git clean -df"
+alias gbdone='git branch --merged| egrep -v "(^\*|master|main|dev|develop)"'
 
 # Works shortcuts
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
@@ -107,3 +108,10 @@ function compile_and_run() {
   gcc $fullname -o $filename && ./$filename
 }
 eval "$(pyenv init -)"
+
+alias nv="~/Downloads/nvim-osx64/bin/nvim -u ~/nvim5/init.vim"
+alias nv5="~/Tools/nvim0.5.1/bin/nvim -u ~/Tools/nvim5conf/init.vim"
+alias nv5conf="nv5 ~/Tools/nvim5conf/init.vim"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
