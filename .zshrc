@@ -108,6 +108,7 @@ function compile_and_run() {
   gcc $fullname -o $filename && ./$filename
 }
 eval "$(pyenv init -)"
+eval "$(rbenv init - zsh)"
 
 alias nv="~/Downloads/nvim-osx64/bin/nvim -u ~/nvim5/init.vim"
 alias nv5="~/Tools/nvim0.5.1/bin/nvim -u ~/Tools/nvim5conf/init.vim"
