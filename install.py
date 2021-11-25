@@ -55,7 +55,7 @@ pwd = os.path.dirname(os.path.realpath(__file__))
 iterate_and_install(pwd, home)
 
 sublime_source = os.path.join(pwd, 'sublime/User')
-sublime_target = os.path.join(home, 'Library/Application Support/Sublime Text 3/Packages/User')
+sublime_target = os.path.join(home, 'Library/Application Support/Sublime Text/Packages/User')
 install_sublime(sublime_source, sublime_target)
 
 vscode_source = os.path.join(pwd, 'vscode')

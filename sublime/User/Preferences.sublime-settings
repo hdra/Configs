@@ -1,0 +1,10 @@
+{
+	"draw_white_space": "all",
+	"font_size": 17,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"preview_on_click": false,
+	"translate_tabs_to_spaces": true,
+}
