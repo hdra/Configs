@@ -34,6 +34,7 @@ alias gp="git push"
 alias gcm="git commit -m"
 alias gam="git commit -am"
 alias gd="git diff"
+alias gch="git checkout"
 alias gnuke="git reset --hard && git clean -df"
 alias gbdone='git branch --merged| egrep -v "(^\*|master|main|dev|develop)"'
 
