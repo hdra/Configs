@@ -29,7 +29,6 @@ export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/mysql/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-export PATH=$PATH:/usr/local/opt/python@2/bin # homebrew's python@2 formula
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$HOME/Tools/flutter/bin:$PATH
 export PATH=$HOME/.serverless/bin:$PATH
