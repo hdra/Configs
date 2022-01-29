@@ -56,8 +56,10 @@ iterate_and_install(pwd, home)
 
 sublime_source = os.path.join(pwd, 'sublime/User')
 sublime_target = os.path.join(home, 'Library/Application Support/Sublime Text/Packages/User')
+os.makedirs(sublime_target)
 install_sublime(sublime_source, sublime_target)
 
 vscode_source = os.path.join(pwd, 'vscode')
 vscode_target = os.path.join(home, 'Library/Application Support/Code/User')
+os.makedirs(vscode_target)
 install_vscode(vscode_source, vscode_target)

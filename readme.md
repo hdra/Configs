@@ -4,4 +4,4 @@ Collection of config files, with many ZSH functions taken from [prezto](https://
 
     git clone --recurse-submodules git@github.com:hdra/Configs.git ~/.dotfiles
     cd ~/.dotfiles
-    ./install.py
+    python3 install.py
