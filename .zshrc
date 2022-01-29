@@ -117,3 +117,5 @@ alias nv5conf="nv5 ~/Tools/nvim5conf/init.vim"
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"

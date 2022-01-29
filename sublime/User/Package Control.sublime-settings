@@ -7,5 +7,7 @@
 	[
 		"JSON Reindent",
 		"Package Control",
+		"SqlBeautifier",
+		"Terraform",
 	],
 }
