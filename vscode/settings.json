@@ -5,7 +5,7 @@
     "workbench.list.openMode": "doubleClick",
     "editor.minimap.enabled": false,
     "editor.fontLigatures": false,
-    "editor.fontSize": 24,
+    "editor.fontSize": 20,
     "editor.lineHeight": 0,
     "editor.tabSize": 2,
     "editor.fontFamily": "'Fira Code', Menlo, monospace",
@@ -66,7 +66,7 @@
     "vim.incsearch": true,
     "vim.foldfix": true,
     "vim.useSystemClipboard": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Tokyo Night",
     "terminal.integrated.fontSize": 14,
     "[typescript]": {
         "editor.tabSize": 2
@@ -87,5 +87,6 @@
     "window.zoomLevel": -1,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "editor.inlineSuggest.enabled": true
 }
