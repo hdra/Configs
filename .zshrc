@@ -111,9 +111,7 @@ function compile_and_run() {
 eval "$(pyenv init -)"
 eval "$(rbenv init - zsh)"
 
-alias nv="~/Downloads/nvim-osx64/bin/nvim -u ~/nvim5/init.vim"
-alias nv5="~/Tools/nvim0.5.1/bin/nvim -u ~/Tools/nvim5conf/init.vim"
-alias nv5conf="nv5 ~/Tools/nvim5conf/init.vim"
+alias kssh="kitty +kitten ssh"
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"

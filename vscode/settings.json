@@ -5,7 +5,6 @@
     "workbench.list.openMode": "doubleClick",
     "editor.minimap.enabled": false,
     "editor.fontLigatures": false,
-    "editor.fontSize": 20,
     "editor.lineHeight": 0,
     "editor.tabSize": 2,
     "editor.fontFamily": "'Fira Code', Menlo, monospace",
@@ -84,9 +83,9 @@
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
     },
-    "window.zoomLevel": -1,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "window.zoomLevel": 1
 }

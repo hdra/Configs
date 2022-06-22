@@ -23,6 +23,7 @@ export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_P
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/.bin:$PATH
+export PATH=$HOME/.bin/platform-tools:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.mix/escripts:$PATH
 export PATH=$PATH:$HOME/.composer/vendor/bin:/usr/local/php5/bin
