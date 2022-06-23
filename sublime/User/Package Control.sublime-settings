@@ -5,7 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"EasyMotion",
 		"JSON Reindent",
+		"JSONLint",
+		"JumpTo",
 		"Package Control",
 		"SqlBeautifier",
 		"Terraform",

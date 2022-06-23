@@ -1,3 +1,8 @@
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
 #Collection of configs for a nice ZSH default
 if [[ -s "${HOME}/.dotfiles/zsh/init.zsh" ]]; then
   source "${HOME}/.dotfiles/zsh/init.zsh"
@@ -72,6 +77,21 @@ function with_env() {
   eval $(egrep -v '^#' $1 | xargs) ${@:2}
 }
 
+function remote_ecs() {
+  local env="$1"
+  local cluster="$env-lj-ecs-cluster"
+  local taskdef="lj-$env-brain-taskdef"
+  local container="lj-$env-brain-container"
+  local arn=$(aws ecs list-tasks --cluster $cluster --family $taskdef | jq -r '.taskArns[0]' | awk -F "/" '{print $3}')
+
+  aws ecs execute-command \
+    --cluster $cluster \
+    --task $arn \
+    --container $container \
+    --command "sh" \
+    --interactive
+}
+
 function install_subl() {
   ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $HOME/.local/bin/subl
 }
@@ -117,3 +137,8 @@ alias kssh="kitty +kitten ssh"
 export PATH="$HOME/.serverless/bin:$PATH"
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
