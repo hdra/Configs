@@ -130,5 +130,4 @@ alias kssh="kitty +kitten ssh"
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
-
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/Users/hndr/Library/Python/3.9/bin:$PATH"
