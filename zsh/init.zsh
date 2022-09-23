@@ -48,4 +48,3 @@ source "${HOME}/.dotfiles/zsh/history.zsh"
 source "${HOME}/.dotfiles/zsh/colors.zsh"
 source "${HOME}/.dotfiles/zsh/prompts.zsh"
 source "${HOME}/.dotfiles/zsh/fasd.zsh"
-

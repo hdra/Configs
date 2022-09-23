@@ -131,3 +131,8 @@ alias kssh="kitty +kitten ssh"
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 export PATH="/Users/hndr/Library/Python/3.9/bin:$PATH"
+
+
+gsw() {
+ git checkout "$(git branch | fzf| tr -d '[:space:]')"
+}
