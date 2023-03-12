@@ -25,7 +25,8 @@
                                             "^org\\.mozilla\\.firefox$",
                                             "^com\\.google\\.Chrome$",
                                             "^com\\.google\\.Chrome\\.canary$",
-                                            "^com\\.apple\\.Safari$"
+                                            "^com\\.apple\\.Safari$",
+                                            "^company\\.thebrowser\\.Browser$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -52,6 +53,7 @@
                                             "^org\\.mozilla\\.firefox$",
                                             "^com\\.google\\.Chrome$",
                                             "^com\\.google\\.Chrome\\.canary$",
+                                            "^company\\.thebrowser\\.Browser$",
                                             "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -79,6 +81,7 @@
                                             "^org\\.mozilla\\.firefox$",
                                             "^com\\.google\\.Chrome$",
                                             "^com\\.google\\.Chrome\\.canary$",
+                                            "^company\\.thebrowser\\.Browser$",
                                             "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -106,6 +109,7 @@
                                             "^org\\.mozilla\\.firefox$",
                                             "^com\\.google\\.Chrome$",
                                             "^com\\.google\\.Chrome\\.canary$",
+                                            "^company\\.thebrowser\\.Browser$",
                                             "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -138,6 +142,7 @@
                                             "^org\\.mozilla\\.firefox$",
                                             "^com\\.google\\.Chrome$",
                                             "^com\\.google\\.Chrome\\.canary$",
+                                            "^company\\.thebrowser\\.Browser$",
                                             "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -168,6 +173,7 @@
                                             "^org\\.mozilla\\.firefox$",
                                             "^com\\.google\\.Chrome$",
                                             "^com\\.google\\.Chrome\\.canary$",
+                                            "^company\\.thebrowser\\.Browser$",
                                             "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_if"
