@@ -87,6 +87,52 @@ function remote_ecs() {
     --interactive
 }
 
+function remote_client_portal() {
+  local env="$1"
+  local cluster="$env-lj-ecs-cluster"
+  local taskdef="lj-$env-client-taskdef"
+  local container="lj-$env-client-container"
+  local arn=$(aws ecs list-tasks --cluster $cluster --family $taskdef | jq -r '.taskArns[0]' | awk -F "/" '{print $3}')
+
+  aws ecs execute-command \
+    --cluster $cluster \
+    --task $arn \
+    --container $container \
+    --command "sh" \
+    --interactive
+}
+
+function remote_admin_portal() {
+  local env="$1"
+  local cluster="$env-lj-ecs-cluster"
+  local taskdef="lj-$env-admin-taskdef"
+  local container="lj-$env-admin-container"
+  local arn=$(aws ecs list-tasks --cluster $cluster --family $taskdef | jq -r '.taskArns[0]' | awk -F "/" '{print $3}')
+
+  aws ecs execute-command \
+    --cluster $cluster \
+    --task $arn \
+    --container $container \
+    --command "sh" \
+    --interactive
+}
+
+function remote_meta() {
+  local env="$1"
+  local cluster="$env-lj-ecs-cluster"
+  local taskdef="lj-$env-metabase-taskdef"
+  local container="lj-$env-metabase-container"
+  local arn=$(aws ecs list-tasks --cluster $cluster --family $taskdef | jq -r '.taskArns[0]' | awk -F "/" '{print $3}')
+
+  aws ecs execute-command \
+    --cluster $cluster \
+    --task $arn \
+    --container $container \
+    --command "sh" \
+    --interactive
+}
+
+
 function install_subl() {
   ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $HOME/.local/bin/subl
 }
