@@ -58,6 +58,7 @@ alias vi="vim"
 alias vim="nvim"
 alias tmx="tmux"
 alias runs="reattach-to-user-namespace"
+alias wz="wezterm"
 
 function daynote(){
  vim $(date +%Y-%m-%d).md
