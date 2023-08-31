@@ -41,6 +41,26 @@ config.keys = {
     mods = 'LEADER',
     action = wezterm.action.ActivatePaneDirection 'Right',
   },
+  {
+    key = 'H',
+    mods = 'LEADER',
+    action = wezterm.action.AdjustPaneSize {'Left', 5},
+  },
+  {
+    key = 'J',
+    mods = 'LEADER',
+    action = wezterm.action.AdjustPaneSize {'Down', 5},
+  },
+  {
+    key = 'K',
+    mods = 'LEADER',
+    action = wezterm.action.AdjustPaneSize {'Up', 5},
+  },
+  {
+    key = 'L',
+    mods = 'LEADER',
+    action = wezterm.action.AdjustPaneSize {'Right', 5},
+  },
   -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
   {
     key = 'a',
