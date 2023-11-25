@@ -50,6 +50,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 
+export KUBECONFIG=$HOME/kubeclusters/linode.yaml
 
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 

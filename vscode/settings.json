@@ -42,13 +42,22 @@
             "commands": ["workbench.action.gotoSymbol"]
         },
         {
+            "before": ["<leader>", "g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
             "before": ["u"],
             "commands": ["undo"]
         },
         {
             "before": ["<C-r>"],
             "commands": ["redo"]
+        },
+        {
+            "before": ["<C-p>"],
+            "commands": ["workbench.action.quickOpen"]
         }
+        
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -87,5 +96,11 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.inlineSuggest.enabled": true,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    }
 }
