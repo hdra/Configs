@@ -38,6 +38,8 @@ alias gch="git checkout"
 alias gnuke="git reset --hard && git clean -df"
 alias gbdone='git branch --merged| egrep -v "(^\*|master|main|dev|develop)"'
 
+alias nvk='NVIM_APPNAME="nvimkickstart" nvim'
+
 # Works shortcuts
 alias gtd="git log --since="6am" --author='$GIT_AUTHOR' --oneline --no-merges | sed -e 's/^[a-z0-9]\{7\} //' | sed '/commit/d' | sed -e 's/^\([a-zA-Z0-9]\)/ - \1/' | tr -d '\n' | sed 's/\([a-zA-Z0-9]\)-\([a-zA-Z0-9]\)/\1_\2/' | tr '-' '\n' | sed -e '/^ $/d' | sed 's/^ /- /'"
 
