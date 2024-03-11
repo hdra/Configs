@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+update partner_updates set deleted_at = now() where deleted_at is null and id IN (${1:this});
+update luwjistik_statuses set deleted_at = now() where deleted_at is null and partner_update_id IN (${1:this});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

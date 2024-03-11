@@ -41,3 +41,12 @@ fi
 if [ -f "/usr/local/bin/brew" ]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
+
+##
+# Your previous /Users/hndr/.zprofile file was backed up as /Users/hndr/.zprofile.macports-saved_2023-11-27_at_15:40:57
+##
+
+# MacPorts Installer addition on 2023-11-27_at_15:40:57: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+

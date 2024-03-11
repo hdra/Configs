@@ -90,6 +90,21 @@ function remote_ecs() {
     --interactive
 }
 
+function remote_submit_worker() {
+  local env="$1"
+  local cluster="$env-lj-ecs-cluster"
+  local taskdef="lj-$env-brain-worker-submission"
+  local container="lj-$env-brain-container"
+  local arn=$(aws ecs list-tasks --cluster $cluster --family $taskdef | jq -r '.taskArns[0]' | awk -F "/" '{print $3}')
+
+  aws ecs execute-command \
+    --cluster $cluster \
+    --task $arn \
+    --container $container \
+    --command "sh" \
+    --interactive
+}
+
 function remote_client_portal() {
   local env="$1"
   local cluster="$env-lj-ecs-cluster"
@@ -186,7 +201,7 @@ gsw() {
  git checkout "$(git branch | fzf| tr -d '[:space:]')"
 }
 export VOLTA_HOME="$HOME/.volta"
-# export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="/Users/hndr/Library/pnpm"
