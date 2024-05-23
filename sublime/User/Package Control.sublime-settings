@@ -6,6 +6,9 @@
 	"installed_packages":
 	[
 		"EasyMotion",
+		"File Navigator",
+		"FileManager",
+		"Git",
 		"JSON Reindent",
 		"JSONLint",
 		"JumpTo",

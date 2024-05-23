@@ -33,6 +33,19 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$HOME/Tools/flutter/bin:$PATH
 export PATH=$HOME/.serverless/bin:$PATH
+export PATH=$PATH:/Applications/WezTerm.app/Contents/MacOS
+export PATH="/Users/hndr/Library/Python/3.9/bin:$PATH"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/hndr/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # Git
 export GIT_AUTHOR=Hendra
