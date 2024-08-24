@@ -197,3 +197,5 @@ gsw() {
  git checkout "$(git branch | fzf| tr -d '[:space:]')"
 }
 
+
+eval "$(~/.local/bin/mise activate zsh)"
