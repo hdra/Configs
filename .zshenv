@@ -71,3 +71,10 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 # export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/dinghy
 # export DOCKER_TLS_VERIFY=1
 # export DOCKER_MACHINE_NAME=dinghy
+
+
+# local envs - meant to be excluded from git - stores machine-specific envs
+LOCAL_ENV_FILE="$HOME/.local_env"
+if [[ -f "$LOCAL_ENV_FILE" ]]; then
+  source "$LOCAL_ENV_FILE"
+fi
