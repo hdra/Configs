@@ -187,8 +187,16 @@ function compile_and_run() {
   filename="${fullname%.*}"
   gcc $fullname -o $filename && ./$filename
 }
-eval "$(pyenv init -)"
-eval "$(rbenv init - zsh)"
+
+if command -v pyenv 2>&1 >/dev/null
+then
+  eval "$(pyenv init -)"
+fi
+
+if command -v rbenv 2>&1 >/dev/null
+then
+  eval "$(rbenv init - zsh)"
+fi
 
 alias kssh="kitty +kitten ssh"
 
