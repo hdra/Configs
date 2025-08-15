@@ -21,12 +21,12 @@ fi
 cache_file="${0:h}/fasd_cache.zsh"
 if [[ "${commands[fasd]}" -nt "$cache_file" || ! -s "$cache_file"  ]]; then
   # Set the base init arguments.
-  init_args=(zsh-hook)
+  init_args=(osix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)
 
-  # Set fasd completion init arguments, if applicable.
-  if zstyle -t ':prezto:module:completion' loaded; then
-    init_args+=(zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)
-  fi
+  # # Set fasd completion init arguments, if applicable.
+  # if zstyle -t ':prezto:module:completion' loaded; then
+  #   init_args+=(zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)
+  # fi
 
   # Cache init code.
   fasd --init "$init_args[@]" >! "$cache_file" 2> /dev/null

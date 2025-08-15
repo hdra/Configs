@@ -5,4 +5,4 @@ keybind=ctrl+a>l=goto_split:right
 keybind=ctrl+a>j=goto_split:bottom
 keybind=ctrl+a>k=goto_split:top
 
-font-size=16
+font-size=18

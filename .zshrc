@@ -207,3 +207,6 @@ gsw() {
 
 
 eval "$(~/.local/bin/mise activate zsh)"
+export PATH="$(brew --prefix)/libpq/bin:$PATH"
+
+

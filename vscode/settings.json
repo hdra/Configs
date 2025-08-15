@@ -103,5 +103,12 @@
         "markdown": false,
         "scminput": false
     },
-    "rubocop.mode": "onlyRunGlobally"
+    "rubocop.mode": "onlyRunGlobally",
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "mise"
+    },
+    "rubyLsp.bundleGemfile": "/Users/hndr/.global-ruby/Gemfile",
+    "rubyLsp.addonSettings": {
+
+    }
 }

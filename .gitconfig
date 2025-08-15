@@ -8,7 +8,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [core]
-	excludesfile = /Users/hndr/.gitignore_global
+	excludesFile = ~/.gitignore
 	editor = nvim
 [pull]
 	ff = only
