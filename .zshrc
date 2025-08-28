@@ -205,6 +205,18 @@ gsw() {
  git checkout "$(git branch | fzf| tr -d '[:space:]')"
 }
 
+function tag_and_push() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: tag_and_push <tag-name>"
+    return 1
+  fi
+
+  local tag_name="$1"
+
+  git tag "$tag_name" && git push origin tag "$tag_name"
+}
+
+
 
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="$(brew --prefix)/libpq/bin:$PATH"

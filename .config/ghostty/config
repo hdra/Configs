@@ -4,7 +4,6 @@ keybind=ctrl+a>h=goto_split:left
 keybind=ctrl+a>l=goto_split:right
 keybind=ctrl+a>j=goto_split:bottom
 keybind=ctrl+a>k=goto_split:top
-
 font-size=18
-
 font-family=Google Sans Code
+window-inherit-font-size=false
