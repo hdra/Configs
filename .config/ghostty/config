@@ -6,3 +6,5 @@ keybind=ctrl+a>j=goto_split:bottom
 keybind=ctrl+a>k=goto_split:top
 
 font-size=18
+
+font-family=Google Sans Code
