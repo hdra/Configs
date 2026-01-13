@@ -209,4 +209,6 @@ gsw() {
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="$(brew --prefix)/libpq/bin:$PATH"
 
-
+function datestamp() {
+    date -u +"%Y-%m-%d"
+}

@@ -21,3 +21,10 @@
 	clean = git-lfs clean -- %f
 [includeIf "gitdir:~/Work/ship/**"]
     path="~/Work/ship/shippit.gitconfig"
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[rerere]
+	enabled = true

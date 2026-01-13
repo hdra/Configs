@@ -64,7 +64,8 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 #IEX Shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
 
 export KUBECONFIG=$HOME/kubeclusters/linode.yaml
 
@@ -78,7 +79,7 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 eval "$(~/.local/bin/mise activate zsh)"
 
 # local envs - meant to be excluded from git - stores machine-specific envs
-LOCAL_ENV_FILE="$HOME/.local_env"
+LOCAL_ENV_FILE="$HOME/.local.sh"
 if [[ -f "$LOCAL_ENV_FILE" ]]; then
   source "$LOCAL_ENV_FILE"
 fi
