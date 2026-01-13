@@ -205,10 +205,62 @@ gsw() {
  git checkout "$(git branch | fzf| tr -d '[:space:]')"
 }
 
+function gtp() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: tag_and_push <tag-name>"
+    return 1
+  fi
+
+  local tag_name="$1"
+
+  git tag "$tag_name" && git push origin tag "$tag_name"
+}
+
 
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="$(brew --prefix)/libpq/bin:$PATH"
 
 function datestamp() {
     date -u +"%Y-%m-%d"
+}
+
+gw-add() {
+    if [ -z "$1" ]; then
+        echo "Usage: gwj <branch-name>"
+        return 1
+    fi
+
+    # 1. Safety Check: Are we already inside a worktree directory?
+    if [[ "$PWD" == *"-worktrees"* ]]; then
+        echo "Error: You are already inside a worktree directory!"
+        return 1
+    fi
+
+    local branch_name=$1
+    local current_dir_name="${PWD##*/}"
+    local wt_parent="../${current_dir_name}-worktrees"
+    local target="$wt_parent/$branch_name"
+    
+    mkdir -p "$wt_parent"
+
+    # 2. Logic: Check if the branch exists locally or on remote
+    if git rev-parse --verify "$branch_name" >/dev/null 2>&1; then
+        echo "Branch '$branch_name' exists. Checking out existing branch..."
+        git worktree add "$target" "$branch_name"
+    else
+        echo "Branch '$branch_name' not found. Creating new branch..."
+        git worktree add "$target" -b "$branch_name"
+    fi
+
+    # 3. Jump in
+    cd "$target"
+}
+
+gw-rm() {
+    local current_dir_name="${PWD##*/}"
+    # Strip suffix if we are already inside a worktree to find the parent
+    local base_name="${current_dir_name%-worktrees*}"
+    local target="../${base_name}-worktrees/$1"
+
+    git worktree remove "$target"
 }
