@@ -220,8 +220,9 @@ function gtp() {
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="$(brew --prefix)/libpq/bin:$PATH"
 
-
-
+function datestamp() {
+    date -u +"%Y-%m-%d"
+}
 
 gw-add() {
     if [ -z "$1" ]; then
