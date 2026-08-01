@@ -37,6 +37,7 @@ alias gd="git diff"
 alias gch="git checkout"
 alias gnuke="git reset --hard && git clean -df"
 alias gbdone='git branch --merged| egrep -v "(^\*|master|main|dev|develop)"'
+alias grb='git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short) | %(committerdate:relative)"'
 
 alias nvk='NVIM_APPNAME="nvimkickstart" nvim'
 
