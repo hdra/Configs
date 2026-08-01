@@ -1,0 +1,25 @@
+onboarding = false
+[ui]
+agent_panel_sort = "priority"
+
+[ui.toast]
+delivery = "system"
+
+[keys]
+prefix = "ctrl+a"
+goto = "prefix+g"
+workspace_picker = "prefix+w"
+new_workspace = "prefix+shift+c"
+navigate_workspace_up = "up"
+navigate_workspace_down = "down"
+navigate_pane_left = "h"
+navigate_pane_down = "j"
+navigate_pane_up = "k"
+navigate_pane_right = "l"
+new_tab = "prefix+c"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+switch_tab = "prefix+1..9"
+switch_workspace = "cmd+1..9"
+split_vertical = "prefix+|"
+split_horizontal = "prefix+minus"
