@@ -5,6 +5,7 @@ import shutil
 excludes = [
   'readme.md',
   'install.py',
+  'install.sh',
   '.git',
   '.gitignore',
   '.gitmodules',
@@ -12,6 +13,8 @@ excludes = [
   'zsh',
   'vscode',
   'Brewfile',
+  'CLAUDE.md',
+  'agent',
 ]
 # container directory. don't symlink directly, symlinks the contents instead
 containers = ['.config']
