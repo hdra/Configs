@@ -1,1 +1,6 @@
 .local_env
+
+.config/herdr/*.log
+.config/herdr/*.lock
+.config/herdr/*.sock
+.config/herdr/session.json
